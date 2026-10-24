@@ -1,56 +1,21 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f4f5ef">
-  <title>Daily Wellbeing Check-in</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="app.js" defer></script>
-</head>
-<body>
-  <main class="shell">
-    <header class="intro">
-      <p class="eyebrow">A personal reflection tool</p>
-      <h1>How are your daily habits feeling?</h1>
-      <p class="lead">Use this quick check-in to reflect on sleep, movement, screen time, and stress. Your answers stay in this browser.</p>
-    </header>
-
-    <section class="card" aria-labelledby="form-title">
-      <h2 id="form-title">Your check-in</h2>
-      <form id="checkin-form">
-        <label for="sleep">Sleep last night <span id="sleep-value">7 hours</span></label>
-        <input id="sleep" name="sleep" type="range" min="0" max="12" step="0.5" value="7">
-
-        <label for="movement">Movement today <span id="movement-value">30 minutes</span></label>
-        <input id="movement" name="movement" type="range" min="0" max="180" step="5" value="30">
-
-        <label for="screen">Leisure screen time <span id="screen-value">3 hours</span></label>
-        <input id="screen" name="screen" type="range" min="0" max="12" step="0.5" value="3">
-
-        <label for="stress">How stressed do you feel?</label>
-        <select id="stress" name="stress">
-          <option value="1">A little</option>
-          <option value="2" selected>Somewhat</option>
-          <option value="3">Quite a bit</option>
-          <option value="4">A lot</option>
-        </select>
-        <button type="submit">See my reflection</button>
-      </form>
-    </section>
-
-    <section id="result" class="card result" aria-live="polite" hidden>
-      <p class="eyebrow">Today’s habit snapshot</p>
-      <div class="score-line"><span id="score">—</span><span class="out-of">/ 100</span></div>
-      <h2 id="result-title">Your reflection</h2>
-      <p id="result-copy"></p>
-      <ul id="tips"></ul>
-      <button id="reset" class="secondary" type="button">Adjust answers</button>
-    </section>
-
-    <footer>
-      <p>This is a simple educational reflection tool, not a medical or mental-health assessment. It does not diagnose or predict a condition. If you’re struggling, consider talking with someone you trust or a qualified professional.</p>
-    </footer>
-  </main>
-</body>
-</html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Student Wellbeing Habits</title><link rel="stylesheet" href="style.css"><script src="app.js" defer></script></head>
+<body><main class="wrap"><header><p class="tag">DATA SCIENCE PROJECT</p><h1>Student wellbeing habits</h1><p class="sub">Explore how reported routines relate to a dataset’s self-reported score. This prototype is for learning and reflection, not clinical use.</p></header>
+<section class="panel"><h2>Enter a profile</h2><form id="form">
+<div class="grid">
+<label>Age<input name="age" type="number" min="10" max="100" value="21" required></label>
+<label>Gender<select name="gender"><option>Female</option><option>Male</option></select></label>
+<label>Country<input name="country" value="India" required></label>
+<label>Academic level<select name="academic_level"><option>Undergraduate</option><option>Graduate</option><option>High School</option></select></label>
+<label>Most-used platform<select name="most_used_platform"><option>Instagram</option><option>YouTube</option><option>WhatsApp</option><option>Facebook</option><option>LinkedIn</option><option>Snapchat</option><option>TikTok</option><option>Twitter</option><option>Other</option></select></label>
+<label>Primary purpose<select name="purpose_of_use"><option>Entertainment</option><option>Education</option><option>Networking</option><option>News</option></select></label>
+<label>Social media hours/day<input name="avg_daily_usage_hours" type="number" min="0" max="24" step="0.1" value="4" required></label>
+<label>Phone unlocks/day<input name="daily_unlocks" type="number" min="0" value="100" required></label>
+<label>Study hours/day<input name="study_hours" type="number" min="0" max="24" step="0.1" value="4" required></label>
+<label>Activity hours/day<input name="physical_activity_hours" type="number" min="0" max="24" step="0.1" value="1" required></label>
+<label>Sleep hours/night<input name="sleep_hours_per_night" type="number" min="0" max="24" step="0.1" value="7" required></label>
+<label>Perceived stress<select name="stress_level"><option>Low</option><option selected>Medium</option><option>High</option><option>Very High</option></select></label>
+</div><button id="submit">Request estimate</button></form></section>
+<section id="output" class="panel output" aria-live="polite" hidden></section>
+<footer>Educational prototype only. The score reflects patterns in the supplied training dataset; it is not a diagnosis, screening result, or substitute for professional support. Avoid entering identifiable or sensitive personal information.</footer>
+</main></body></html>
